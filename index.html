@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Astronômico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quiz Interativo Astronômico</h1>
+        <p>Teste seus conhecimentos em astronomia</p>
+    </header>
+
+    <main>
+        <!-- Página Principal -->
+        <section class="introducao">
+            <h2>Bem-vindo ao Quiz Astronômico</h2>
+            <p>Explore os mistérios do universo de forma divertida e desafiadora. Teste seus conhecimentos sobre
+                planetas, estrelas, galáxias e muito mais. Aprenda curiosidades incríveis enquanto se diverte com
+                perguntas de diferentes níveis.</p>
+            <p>Pronto para embarcar nessa jornada cósmica?</p>
+            <button class="comecar-quiz">Começar Quiz</button>
+        </section>
+
+        <!-- Seção do Quiz (inicialmente oculta) -->
+        <section class="quiz-section" style="display: none;">
+            <!-- pergunta 01: multipla escolha-->
+            <section>
+                <h2>Pergunta 01: Qual é o objeto criado pelo ser humano que está mais distante da Terra atualmente? </h2>
+                <form>
+                    <input type="radio" value="SondaVoyager1" id="p1a" name="pergunta1">
+                    <label for="p1a">Sonda Voyager 1</label> <br>
+                    <input type="radio" value="TelescópioespacialJamesWebb" id="p1b" name="pergunta1">
+                    <label for="p1b">Telescópio espacial James Webb</label> <br>
+                    <input type="radio" value="Rover Curiosity" id="p1c" name="pergunta1">
+                    <label for="p1c">Rover Curiosity</label> <br>
+                    <input type="radio" value="Sonda Sputnik" id="p1d" name="pergunta1">
+                    <label for="p1d">Sonda Sputnik</label> <br>
+                    <input type="radio" value="Telescópio Espacial Hubble" id="p1e" name="pergunta1">
+                    <label for="p1e">Telescópio Espacial Hubble</label>
+                </form>
+            </section>
+            <!-- pergunta 02: texto -->
+            <section>
+                <h2>Pergunta 02: O que está no centro da nossa galaxia ?</h2>
+                <form >
+                    <input type="text" id="p2" name="pergunta2" placeholder="Digite sua resposta...">
+                    <button>Submit</button>
+                </form>
+            </section>
+            <!-- pergunta 03: senha -->
+            <section>
+                <h2>Pergunta 03: Nomes cientificos de estrelas são sempre complicados, e está na hora de você criar um nome complicado tambem.</h2>
+                <p>  <i>por hora, este nome será secreto, por isso vamos tratalo como uma senha, como todo bom nome de estrela, ela deve conter letras, numeros e caracteres especiais.</i></p>
+                <form>
+                    <input type="password" name="pergunta3" id="ap3" placeholder="Digite o nome secreto">
+                    <button>Submit</button>
+                </form>
+            </section>
+            <!-- pergunta 04: data -->
+            <section>
+                <h2>Pergunta 04: Em que ano, o primeiro ser humano pisou na lua?</h2>
+                <form>
+                    <input type="date">
+                </form>
+            </section>
+            <!-- pergunta 05: seleção multipla -->
+            <section>
+                <h2>Pergunta 05: Considerando os planetas do sistema solar, quais deles são considerados planetas gasosos?</h2>
+                <form>
+                    <input type="checkbox" id="p5a" name="pergunta5" value="Júpiter">
+                    <label for="p5a">Júpiter</label> <br>
+                    <input type="checkbox" id="p5b" name="pergunta5" value="Saturno">
+                    <label for="p5b">Saturno</label> <br>
+                    <input type="checkbox" id="p5c" name="pergunta5" value="Urano">
+                    <label for="p5c">Urano</label> <br>
+                    <input type="checkbox" id="p5d" name="pergunta5" value="Marte">
+                    <label for="p5d">Marte</label> <br> 
+                    <input type="checkbox" id="p5e" name="pergunta5" value="Mercúrio">
+                    <label for="p5e">Mercúrio</label><br>
+                </form>
+            </section>
+            <!-- pergunta 06: upload de arquivo -->
+            <section>
+                <h2>Pergunta 06: Já tirou aquela foto bacana do céu noturno ? compartilhe com a gente !</h2>
+                <form>
+                    <input type="file" id="p6" name="pergunta6">
+                </form>
+            </section>
+            <!-- Pergunta 07: menu suspenso -->
+            <section>
+                <h2>Pergunta 07: Em qual estado brasileiro se encontra o Centro de Lançamentos de Alcântara ?</h2>
+                <form>
+                    <select name="pergunta7" id="p7">
+                        <option value="">Selecione...</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </form>
+            </section>
+            <!-- pergunta 08: imagem -->
+            <section>
+                <h2>Pergunta 08: A imagem abaixo representa uma estrutura astronomica muito conhecida, qual o nome dela ? </h2>
+                <figure>
+                    <img class="pilaresDaCriação" src="img/PilaresOfCreation.jpeg" alt="Imagem Interestrelar">
+                    <figcaption>Figura 1: Imagem tirada pelo Telescópio bJames Webb</figcaption>
+                </figure>
+                <input type="text" id="p8" name="pergunta8" placeholder="Digite sua resposta"> 
+            </section>
+            <!-- Tabela de pontuação -->
+            <section>
+                <h2>Tabela de pontuações</h2>
+                <table border="1">
+                    <th>Pontuação</th>
+                    <th>Comentarios</th>
+                    <tr>
+                        <td>0-2</td>
+                        <td>Não desista, foco nos estudos!</td>
+                    </tr>
+                    <tr>
+                        <td>3-4</td>
+                        <td>Chegou perto, mas ainda falta.</td>
+                    </tr>
+                    <tr>
+                        <td>5-6-7</td>
+                        <td>Voce mandou bem, mas pode ir melhor</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>As estrelas brilharam pra você, incrivel, você acertou todas!</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
