@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #f4f0ea;
     color: #798252;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
 }
 
-header{
+header {
     position: relative;
     background: linear-gradient(to bottom, #000428, #004e92);
     text-align: center;
@@ -25,14 +26,19 @@ header * {
     position: relative;
     z-index: 1;
 }
+
 @keyframes starsBlink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
     }
+
     50% {
         opacity: 0.2;
     }
 }
+
 /* Container das estrelas */
 .stars-container {
     position: absolute;
@@ -54,8 +60,15 @@ header * {
 
 /* Animação de piscar */
 @keyframes twinkle {
-    0%, 100% { opacity: 0; }
-    50% { opacity: var(--opacity); }
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: var(--opacity);
+    }
 }
 
 /* Animação de estrela cadente */
@@ -64,6 +77,7 @@ header * {
         transform: translate(0, 0);
         opacity: 1;
     }
+
     100% {
         transform: translate(1000px, 1000px);
         opacity: 0;
@@ -76,9 +90,11 @@ header * {
         transform: translate(0, 0);
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     100% {
         transform: translate(1000px, 1000px);
         opacity: 0;
@@ -129,6 +145,7 @@ header * {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0;
         transform: scale(0.5);
@@ -136,33 +153,38 @@ header * {
 }
 
 /* Melhorando o efeito de brilho */
-.shooting-star, .comet {
+.shooting-star,
+.comet {
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
 }
 
-main{
+main {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-h2{
+h2 {
     color: #331f19;
     font-size: 1.2rem;
 }
 
-input[type="radio"], input[type="checkbox"]{
+input[type="radio"],
+input[type="checkbox"] {
     accent-color: #ccd595;
 }
 
-input[type="text"]{
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"] {
     width: 100%;
     padding: 0.6rem;
     border: 2px solid #ccd595;
@@ -170,8 +192,112 @@ input[type="text"]{
     border-radius: 10px;
     background-color: transparent;
 }
+
 /* para editar o placeholder (pseudo elementos) */
-input::placeholder{
+input::placeholder {
     color: #cbbea7;
 }
 
+select {
+    cursor: pointer;
+    background-color: #ccd595;
+    color: #331f19;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+img {
+    width: 15rem;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ccd595;
+    color: #331f19;
+    padding: 1rem;
+}
+
+td {
+    color: #331f19;
+    padding: 1rem;
+    text-align: center;
+    background-color: #e7e9da;
+}
+
+tfoot td {
+    background-color: #331f19;
+    color: #f4f0ea;
+}
+
+details {
+    background-color: #ccd595;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+summary {
+    color: #331f19;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+ol {
+    margin-left: 1.5rem;
+}
+
+ol li {
+    padding: 0.2rem;
+}
+
+fieldset {
+    border: 2px solid #ccd595;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+legend {
+    color: #331f19;
+    padding: 0 0.5rem;
+}
+
+textarea {
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ccd595;
+}
+
+button {
+    background-color: #ccd595;
+    border: none;
+    padding: 0.5rem;
+    color: #331f19;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #331f19;
+    padding: 2rem;
+    text-align: center;
+}
+
+.paragrafo-footer {
+    color: #f4f0ea;
+}
+
+.link-Linkedin {
+    text-decoration: none;
+    color: #ccd595;
+}
+
+.protifolio {
+    text-decoration: none;
+    color: #ccd595;
+}
