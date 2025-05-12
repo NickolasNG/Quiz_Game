@@ -1,7 +1,7 @@
 // HEADER STARS
 function createStars() {
     const starsContainer = document.querySelector('.stars-container');
-    const numberOfStars = 100; // Número de estrelas
+    const numberOfStars = 200; // Número de estrelas
 
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement('div');
@@ -168,4 +168,3 @@ document.addEventListener('DOMContentLoaded', () => {
     createShootingStars();
     createComets();
 });
-

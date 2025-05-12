@@ -7,19 +7,24 @@
 }
 
 body {
-    background-color: #f4f0ea;
-    color: #798252;
+    background-color: #232946;
+    color: #b8c1ec;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
 }
 
 header {
     position: relative;
-    background: linear-gradient(to bottom, #000428, #004e92);
+    background: #232946;
     text-align: center;
     overflow: hidden;
     padding: 2rem;
-    color: white;
+    color: #fffffe;
+}
+
+.acessibilidadeNasPerguntas{
+    color: #fffffe;
+    font-size: 1.2rem;
 }
 
 header * {
@@ -172,13 +177,13 @@ section {
 }
 
 h2 {
-    color: #331f19;
+    color: #fffffe;
     font-size: 1.2rem;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    accent-color: #ccd595;
+    accent-color: #eebbc3;
 }
 
 input[type="text"],
@@ -187,21 +192,22 @@ input[type="date"],
 input[type="email"] {
     width: 100%;
     padding: 0.6rem;
-    border: 2px solid #ccd595;
+    border: 2px solid #eebbc3;
     outline: none;
     border-radius: 10px;
     background-color: transparent;
+    color: #b8c1ec;
 }
 
 /* para editar o placeholder (pseudo elementos) */
 input::placeholder {
-    color: #cbbea7;
+    color: #b8c1ec;
 }
 
 select {
     cursor: pointer;
-    background-color: #ccd595;
-    color: #331f19;
+    background-color: #eebbc3;
+    color: #232946;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -218,31 +224,31 @@ table {
 }
 
 th {
-    background-color: #ccd595;
-    color: #331f19;
+    background-color: #eebbc3;
+    color: #232946;
     padding: 1rem;
 }
 
 td {
-    color: #331f19;
+    color: #b8c1ec;
     padding: 1rem;
     text-align: center;
-    background-color: #e7e9da;
+    background-color: #232946;
 }
 
 tfoot td {
-    background-color: #331f19;
-    color: #f4f0ea;
+    background-color: #232946;
+    color: #fffffe;
 }
 
 details {
-    background-color: #ccd595;
+    background-color: #eebbc3;
     border-radius: 5px;
     padding: 1rem;
 }
 
 summary {
-    color: #331f19;
+    color: #232946;
     margin: 0.5rem;
     cursor: pointer;
 }
@@ -256,13 +262,13 @@ ol li {
 }
 
 fieldset {
-    border: 2px solid #ccd595;
+    border: 2px solid #eebbc3;
     border-radius: 5px;
     padding: 1rem;
 }
 
 legend {
-    color: #331f19;
+    color: #fffffe;
     padding: 0 0.5rem;
 }
 
@@ -270,34 +276,35 @@ textarea {
     background-color: transparent;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #ccd595;
+    border: 2px solid #eebbc3;
+    color: #b8c1ec;
 }
 
 button {
-    background-color: #ccd595;
+    background-color: #eebbc3;
     border: none;
     padding: 0.5rem;
-    color: #331f19;
+    color: #232946;
     border-radius: 5px;
     cursor: pointer;
 }
 
 footer {
-    background-color: #331f19;
+    background-color: #232946;
     padding: 2rem;
     text-align: center;
 }
 
 .paragrafo-footer {
-    color: #f4f0ea;
+    color: #fffffe;
 }
 
 .link-Linkedin {
     text-decoration: none;
-    color: #ccd595;
+    color: #eebbc3;
 }
 
 .protifolio {
     text-decoration: none;
-    color: #ccd595;
+    color: #eebbc3;
 }
