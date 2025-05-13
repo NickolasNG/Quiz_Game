@@ -1,4 +1,4 @@
-// Função para criar estrelas
+// Criando estrelas
 function createStars() {
     const starsContainer = document.querySelector('.stars-container');
     if (!starsContainer) return;
