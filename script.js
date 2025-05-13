@@ -1,27 +1,34 @@
-// HEADER STARS
+// Função para criar estrelas
 function createStars() {
     const starsContainer = document.querySelector('.stars-container');
-    const numberOfStars = 200; // Número de estrelas
+    if (!starsContainer) return;
 
-    for (let i = 0; i < numberOfStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        
-        // Posição aleatória
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        
-        // Tamanho aleatório
-        const size = Math.random() * 3;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        
-        // Duração e opacidade aleatórias
-        star.style.setProperty('--duration', `${1 + Math.random() * 3}s`);
-        star.style.setProperty('--opacity', `${0.3 + Math.random() * 0.7}`);
-        
-        starsContainer.appendChild(star);
+    // Configurações
+    const config = {
+        stars: { count: 400, minSize: 1, maxSize: 3 }
+    };
+
+    // Criar estrelas iniciais para a página
+    for (let i = 0; i < config.stars.count; i++) {
+        createStar(starsContainer, config.stars.minSize, config.stars.maxSize);
     }
+}
+
+function createStar(container, minSize, maxSize) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    
+    const size = Math.random() * (maxSize - minSize) + minSize;
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${x}%`;
+    star.style.top = `${y}%`;
+    star.style.animationDelay = `${Math.random() * 3}s`;
+    
+    container.appendChild(star);
 }
 
 // Função para criar partículas
@@ -73,98 +80,7 @@ function createTrailParticle(x, y, size) {
     }, 1000);
 }
 
-// Função para criar estrelas cadentes
-function createShootingStars() {
-    const starsContainer = document.querySelector('.stars-container');
-    
-    setInterval(() => {
-        const shootingStar = document.createElement('div');
-        shootingStar.className = 'shooting-star';
-        
-        // Posição inicial aleatória no topo
-        const startX = Math.random() * window.innerWidth * 0.8;
-        const startY = 0;
-        shootingStar.style.left = `${startX}px`;
-        shootingStar.style.top = `${startY}px`;
-        
-        starsContainer.appendChild(shootingStar);
-        
-        // Cria partículas do rastro
-        let lastX = startX;
-        let lastY = startY;
-        const trailInterval = setInterval(() => {
-            // Calcula a nova posição (movimento diagonal)
-            lastX += 15;
-            lastY += 15;
-            
-            // Cria partículas do rastro
-            createTrailParticle(lastX, lastY, 1 + Math.random());
-            
-            // Para de criar partículas quando a estrela sair da tela
-            if (lastX > window.innerWidth || lastY > window.innerHeight) {
-                clearInterval(trailInterval);
-            }
-        }, 50);
-        
-        // Remove a estrela após a animação
-        setTimeout(() => {
-            shootingStar.remove();
-            clearInterval(trailInterval);
-        }, 3000);
-    }, 5000);
-}
-
-// Função para criar cometas
-function createComets() {
-    const starsContainer = document.querySelector('.stars-container');
-    
-    setInterval(() => {
-        const comet = document.createElement('div');
-        comet.className = 'comet';
-        
-        // Posição inicial aleatória no topo
-        const startX = Math.random() * window.innerWidth * 0.8;
-        const startY = 0;
-        comet.style.left = `${startX}px`;
-        comet.style.top = `${startY}px`;
-        
-        starsContainer.appendChild(comet);
-        
-        // Cria partículas do rastro
-        let lastX = startX;
-        let lastY = startY;
-        const trailInterval = setInterval(() => {
-            // Calcula a nova posição (movimento diagonal)
-            lastX += 20;
-            lastY += 20;
-            
-            // Cria partículas do rastro
-            createTrailParticle(lastX, lastY, 1.5 + Math.random());
-            
-            // Para de criar partículas quando o cometa sair da tela
-            if (lastX > window.innerWidth || lastY > window.innerHeight) {
-                clearInterval(trailInterval);
-            }
-        }, 30);
-        
-        // Remove o cometa após a animação
-        setTimeout(() => {
-            comet.remove();
-            clearInterval(trailInterval);
-        }, 4000);
-    }, 8000);
-}
-
-// Inicializa os efeitos quando a página carregar
+// Inicializar estrelas quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
-    // Cria o container de estrelas se não existir
-    if (!document.querySelector('.stars-container')) {
-        const starsContainer = document.createElement('div');
-        starsContainer.className = 'stars-container';
-        document.querySelector('header').appendChild(starsContainer);
-    }
-    
     createStars();
-    createShootingStars();
-    createComets();
 });

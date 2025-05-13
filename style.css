@@ -11,156 +11,23 @@ body {
     color: #b8c1ec;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
+    position: relative;
+    overflow-x: hidden;
 }
 
 header {
     position: relative;
-    background: #232946;
+    background: transparent;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
     padding: 2rem;
     color: #fffffe;
-}
-
-.acessibilidadeNasPerguntas{
-    color: #fffffe;
-    font-size: 1.2rem;
-}
-
-header * {
-    position: relative;
     z-index: 1;
 }
 
-@keyframes starsBlink {
-
-    0%,
-    100% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-}
-
-/* Container das estrelas */
-.stars-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-/* Estrelas base */
-.star {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    animation: twinkle var(--duration) infinite;
-    opacity: 0.6;
-}
-
-/* Animação de piscar */
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: var(--opacity);
-    }
-}
-
-/* Animação de estrela cadente */
-@keyframes shootingStar {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(1000px, 1000px);
-        opacity: 0;
-    }
-}
-
-/* Animação de cometa */
-@keyframes comet {
-    0% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(1000px, 1000px);
-        opacity: 0;
-    }
-}
-
-/* Removendo os rastros estáticos anteriores */
-.shooting-star::after,
-.comet::after {
-    display: none;
-}
-
-/* Estilo base para estrela cadente */
-.shooting-star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.8);
-    animation: shootingStar 3s linear infinite;
-    opacity: 0;
-}
-
-/* Estilo base para cometa */
-.comet {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.9);
-    animation: comet 4s linear infinite;
-    opacity: 0;
-}
-
-/* Estilo das partículas do rastro */
-.trail-particle {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fadeOut 1s ease-out forwards;
-    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.8);
-}
-
-/* Animação de desvanecimento das partículas */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-}
-
-/* Melhorando o efeito de brilho */
-.shooting-star,
-.comet {
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+.acessibilidadeNasPerguntas {
+    color: #fffffe;
+    font-size: 1.2rem;
 }
 
 main {
@@ -168,6 +35,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 section {
@@ -293,7 +162,11 @@ footer {
     background-color: #232946;
     padding: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
+
+/* USO DE IA PARA ESTRELAS DE FUNDO */
 
 .paragrafo-footer {
     color: #fffffe;
@@ -307,4 +180,55 @@ footer {
 .protifolio {
     text-decoration: none;
     color: #eebbc3;
+}
+
+/* Efeitos de Estrelas */
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+    opacity: 0.8;
+}
+
+.star::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,165,0,0.4) 100%);
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+/* Animações */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* Ajuste para o conteúdo principal */
+main, header, footer {
+    position: relative;
+    z-index: 1;
 }
