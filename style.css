@@ -14,7 +14,7 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
+/* titulo */
 header {
     position: relative;
     background: transparent;
@@ -23,7 +23,6 @@ header {
     padding: 2rem;
     color: #fffffe;
     z-index: 1;
-
 }
 
 main {
@@ -42,6 +41,9 @@ section {
     flex-direction: column;
     gap: 1rem;
     margin: 0.2rem;
+    border: 0.2rem solid;
+    padding: 0.7rem;
+    border-radius: 10px;
 }
 
 h2 {
@@ -170,7 +172,9 @@ footer {
 
 /* Pergunta 01 */
 
+.pergunta-01{
 
+}
 
 /* ----------------------------------------------------------------------USO DE IA PARA ESTRELAS DE FUNDO ----------------------------------------------------*/
 
