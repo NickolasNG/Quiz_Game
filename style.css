@@ -89,7 +89,7 @@ img {
     width: 15rem;
     border-radius: 10px;
 }
-
+/* Tabela de pontuação */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -98,20 +98,20 @@ table {
 th {
     background-color: #eebbc3;
     color: #232946;
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 td {
     color: #b8c1ec;
-    padding: 1rem;
+    padding: 0.7rem;
     text-align: center;
     background-color: #232946;
 }
-
-tfoot td {
+/* -------------------------------------------------------------- */
+/* tfoot td {
     background-color: #232946;
     color: #fffffe;
-}
+} */
 
 details {
     background-color: #eebbc3;
@@ -170,6 +170,74 @@ footer {
     z-index: 1;
 }
 
+.pergunta-01 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-02 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-03 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-04 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-05 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-06 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-07 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pergunta-08 {
+    background-color: #232946;
+    border: 0.2rem solid #eebbc3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+/* .tabelaPontuação{
+
+} */
+
 .paragrafo-footer {
     color: #fffffe;
 }
@@ -182,22 +250,6 @@ footer {
 .protifolio {
     text-decoration: none;
     color: #eebbc3;
-}
-
-.pergunta-01 {
-    background-color: #232946;
-    border: 0.2rem solid #eebbc3;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin: 0;
-}
-
-.pergunta-02{
-    background-color: #232946;
-    border: 0.2rem solid #eebbc3;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin: 0;
 }
 
 /* ----------------------------------------------------------------------USO DE IA PARA ESTRELAS DE FUNDO ----------------------------------------------------*/
