@@ -234,9 +234,6 @@ footer {
     margin: 0;
 }
 
-/* .tabelaPontuação{
-
-} */
 
 .paragrafo-footer {
     color: #fffffe;
@@ -252,7 +249,7 @@ footer {
     color: #eebbc3;
 }
 
-/* ----------------------------------------------------------------------USO DE IA PARA ESTRELAS DE FUNDO ----------------------------------------------------*/
+/* -------------------USO DE IA PARA ESTRELAS DE FUNDO -------------------------------------------------*/
 
 /* Efeitos de Estrelas */
 .stars-container {
@@ -322,4 +319,151 @@ footer {
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     z-index: 0;
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 1024px) {
+    main {
+        max-width: 90%;
+    }
+
+    details {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    img {
+        width: 12rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    details {
+        padding: 0.8rem;
+    }
+
+    summary {
+        font-size: 0.9rem;
+    }
+
+    ol li {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        max-width: 100%;
+        padding: 0.8rem;
+    }
+
+    header {
+        padding: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 10rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.4rem;
+    }
+
+    .pergunta-01,
+    .pergunta-02,
+    .pergunta-03,
+    .pergunta-04,
+    .pergunta-05,
+    .pergunta-06,
+    .pergunta-07,
+    .pergunta-08 {
+        padding: 0.3rem;
+    }
+
+    details {
+        padding: 0.6rem;
+    }
+
+    summary {
+        font-size: 0.85rem;
+        margin: 0.3rem;
+    }
+
+    ol {
+        margin-left: 1rem;
+    }
+
+    ol li {
+        font-size: 0.85rem;
+        padding: 0.15rem;
+    }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    main {
+        padding: 0.5rem;
+    }
+
+    section {
+        gap: 0.5rem;
+    }
+
+    img {
+        max-width: 8rem;
+    }
+
+    details {
+        padding: 0.4rem;
+    }
+
+    summary {
+        margin: 0.2rem;
+    }
+
+    ol li {
+        padding: 0.1rem;
+    }
 }

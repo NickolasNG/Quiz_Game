@@ -1,4 +1,8 @@
-// Criando estrelas
+// Funcionalidades Nick
+
+
+
+// Criando estrelas AI 
 function createStars() {
     const starsContainer = document.querySelector('.stars-container');
     if (!starsContainer) return;
